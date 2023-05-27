@@ -13,16 +13,18 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent
 
 
 #TODO: GET THE SURVEY DATA
-#Load the survey dataset model:
-
-genre_weights_pkl = pickle.load(open(f"{BASE_DIR}/genre_weights_df-{__version__}.pkl", "rb"))
-
-genre_weights_df = pd.DataFrame(genre_weights_pkl)
 
 #load the books dataset model
 books_genres_pkl = pickle.load(open(f"{BASE_DIR}/books_genres_df-{__version__}.pkl", "rb"))
 
 books_genres_df = pd.DataFrame(books_genres_pkl)
+
+#Load the survey dataset model:
+genre_weights_pkl = pickle.load(open(f"{BASE_DIR}/genre_weights_df-{__version__}.pkl", "rb"))
+
+genre_weights_df = pd.DataFrame(genre_weights_pkl)
+
+
 
 #TODO: TEST THE MODELS
 # print("Genre Weights Model: ",genre_weights_df.head())
